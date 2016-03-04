@@ -1,0 +1,32 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/html">
+<body>
+
+This html is attached to the body element by default
+<script type="text/x-handlebars">
+    <h1>This is the default template</h1>
+    {{#link-to 'bugs'}}Bugs{{/link-to}}
+    {{outlet}}
+</script>
+
+<script type="text/x-handlebars" data-template-name="bugs">
+    BUGS BUGS BUGS!!<br>
+</script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/bower_components/ember/ember.debug.js"></script>
+<script src="/bower_components/ember/ember-template-compiler.js"></script>
+<script>
+    var App = Ember.Application.create({});
+    App.Router.map(function(){
+        this.route('bugs');
+    });
+</script>
+</body>
+
+<!--Add outlet to default. Create a new template-->
+
+
+
+
+</html>
